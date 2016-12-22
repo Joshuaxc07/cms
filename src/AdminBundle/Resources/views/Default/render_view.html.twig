@@ -1,0 +1,10 @@
+{% for emp_info in data1 %}
+    <tr>
+        <td>{{ emp_info.Id }}</td>
+        <td>  {{ emp_info.firstName }}  </td>
+        <td>  {{ emp_info.lastName }}</td>
+        <td>   {{ emp_info.middleName}}</td>
+        <td>   {{ emp_info.empAddress }}</td>
+        <td>   {{ emp_info.empDepartment }}</td>
+    </tr>
+{% endfor %}

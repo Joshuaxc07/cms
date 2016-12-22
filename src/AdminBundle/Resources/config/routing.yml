@@ -1,0 +1,14 @@
+admin_homepage:
+    path:     hello/{name}
+    defaults: { _controller: AdminBundle:Default:index }
+add_employee:
+    path:     /add_employee
+    defaults: { _controller: AdminBundle:EmployeeInformation:add_employee }
+
+read_data:
+    path:    /
+    defaults: { _controller:AdminBundle:EmployeeInformation:renderData  }
+
+sample_twig:
+    path:   /main
+    defaults: { _controller:AdminBundle:EmployeeInformation:main }
