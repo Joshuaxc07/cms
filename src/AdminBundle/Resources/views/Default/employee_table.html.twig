@@ -1,0 +1,28 @@
+
+
+<table class="table table-responsive table-bordered">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Middle Name</th>
+        <th>Address</th>
+        <th>Age</th>
+        <th>Department</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for emp_info in data1 %}
+        <tr>
+            <td>    {{ emp_info.Id }}            </td>
+            <td>    {{ emp_info.firstName }}      </td>
+            <td>    {{ emp_info.lastName }}     </td>
+            <td>    {{ emp_info.middleName}}    </td>
+            <td>   {{ emp_info.empAddress }}    </td>
+            <td>        {{ emp_info.empAge }}          </td>
+            <td>   {{ emp_info.empDepartment }}     </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
