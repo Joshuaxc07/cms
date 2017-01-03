@@ -30,6 +30,7 @@ class EmployeeInformationController extends Controller
 
     public function add_employeeAction()
     {
+
         $request = $this->getRequest();
         if($request ->getMethod() == "POST")
         {
@@ -56,18 +57,7 @@ class EmployeeInformationController extends Controller
 
         return $this->render('AdminBundle:Default:index.html.twig');
     }
-    public function connect()
-    {
-        global $propel_conf_path,$debug;
-        Propel::init($propel_conf_path);
-        $conn = Propel::getConnection('default', Propel::CONNECTION_WRITE);
-        $conn->useDebug($debug);
 
-    }
-    public function disconnect()
-    {
-            Propel::close();
-    }
     public function delete_empAction()
     {
         $request = $this->getRequest();
@@ -76,10 +66,8 @@ class EmployeeInformationController extends Controller
             $this->connect();
 
         }
-      
-        
-    }
 
+    }
     public function mainAction()
     {
         return $this->render("AdminBundle:Default:mainpage.html.twig");
